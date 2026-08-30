@@ -144,11 +144,67 @@ footer.site a:hover { color: var(--accent); }
 }
 .phone img { width: 100%; height: auto; display: block; }
 
+@media (prefers-reduced-motion: no-preference) {
+  .hero .wrap > * { animation: rise .6s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero .phone { animation-delay: .12s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+}
+
+/* ── Özellikler ve adımlar (index) ─────────────────────────────────── */
+.feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feat {
+  background: var(--surface); border: 1px solid var(--hairline);
+  border-radius: 26px; padding: 14px 14px 22px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.feat:hover { transform: translateY(-3px); border-color: var(--rule); }
+.feat .shot {
+  border-radius: 18px; overflow: hidden; line-height: 0;
+  border: 1px solid var(--hairline); background: #000;
+}
+.feat .shot img { width: 100%; height: auto; display: block; }
+.feat h3 {
+  font-size: 18.5px; font-weight: 600; letter-spacing: -.015em;
+  margin: 16px 6px 6px; color: var(--fg);
+}
+.feat p { margin: 0 6px; color: var(--fg3); font-size: 14.5px; line-height: 1.55; }
+
+.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.steps li {
+  counter-increment: s; position: relative;
+  background: var(--surface); border: 1px solid var(--hairline);
+  border-radius: 22px; padding: 22px 22px 20px 66px;
+  color: var(--fg2); font-size: 15.5px; line-height: 1.5;
+}
+.steps li b { display: block; color: var(--fg); font-family: "Poppins", sans-serif; font-weight: 600; font-size: 16.5px; letter-spacing: -.01em; margin-bottom: 3px; }
+.steps li::before {
+  content: counter(s); position: absolute; left: 20px; top: 22px;
+  width: 30px; height: 30px; border-radius: 999px;
+  background: var(--btn); color: #fff;
+  font: 600 15px/30px "Poppins", sans-serif; text-align: center;
+}
+
+.strip {
+  margin-top: clamp(40px, 7vw, 72px);
+  border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+  background: var(--surface2); text-align: center;
+  padding: clamp(30px, 5vw, 48px) 0;
+}
+.strip .big {
+  font-family: "Poppins", sans-serif; font-weight: 600; letter-spacing: -.015em;
+  font-size: clamp(19px, 2.6vw, 26px); margin: 0 0 8px; color: var(--fg);
+}
+.strip .sub { margin: 0; color: var(--fg3); font-size: 15.5px; }
+
 /* ── Kart ızgaraları (index) ───────────────────────────────────────── */
-.section { padding: clamp(28px, 5vw, 48px) 0 0; }
+.section { padding: clamp(40px, 7vw, 72px) 0 0; }
+.sk {
+  display: block; font-size: 13px; font-weight: 600; letter-spacing: .14em;
+  color: var(--accent); margin: 0 0 10px;
+}
 .section h2 {
-  font-size: 15px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--fg3); margin: 0 0 16px;
+  font-size: clamp(24px, 3.4vw, 34px); font-weight: 700;
+  letter-spacing: -.02em; line-height: 1.15; margin: 0 0 26px;
 }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .card {
@@ -213,6 +269,8 @@ footer.site a:hover { color: var(--accent); }
   .hero .wrap { grid-template-columns: 1fr; }
   .phone { max-width: 260px; }
   .cards { grid-template-columns: 1fr; }
+  .feats { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .steps { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
   .nav-in { padding: 12px 14px; }
@@ -223,7 +281,7 @@ footer.site a:hover { color: var(--accent); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .card, .card:hover { transition: none; transform: none; }
+  .card, .card:hover, .feat, .feat:hover { transition: none; transform: none; }
 }
 @media print {
   :root { --bg: #fff; --fg: #000; --fg2: #222; --fg3: #555; --accent: #b03d24; --hairline: #ddd; --rule: #ccc; --surface: #fff; }
