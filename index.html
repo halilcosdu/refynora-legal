@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
 <title>Refynora · Seni değiştirmez, fotoğrafı düzeltir.</title>
 <meta name="description" content="Kapalı göz, gergin ifade, karanlık kare. Düzelt, öncesiyle karşılaştır, beğenirsen kaydet.">
 <meta property="og:title" content="Refynora · Seni değiştirmez, fotoğrafı düzeltir.">
@@ -11,8 +12,7 @@
 <link rel="alternate" hreflang="tr" href="https://halilcosdu.github.io/refynora-legal/">
 <link rel="alternate" hreflang="en" href="https://halilcosdu.github.io/refynora-legal/en/">
 <link rel="alternate" hreflang="x-default" href="https://halilcosdu.github.io/refynora-legal/">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#060607">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,42 +20,91 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="cine">
 <header class="nav"><div class="nav-in">
   <a class="brand" href="./">Refy<span>nora</span></a>
   <nav><a href="gizlilik/">Gizlilik</a><a href="kosullar/">Koşullar</a><a href="destek/">Destek</a><a class="lang" href="en/" hreflang="en" lang="en">English</a></nav>
 </div></header>
 
 <main>
-  <section class="hero"><div class="wrap">
-    <div>
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Aynı portrenin karanlık ve düzeltilmiş hâlleri"></div>
+    <div class="wrap">
       <p class="kicker">KÖTÜ ÇIKAN FOTOĞRAFLAR İÇİN</p>
-      <h1>Seni değiştirmez,<br><em>fotoğrafı düzeltir.</em></h1>
+      <h1><span class="w"><span style="animation-delay:0.12s">Seni</span></span> <span class="w"><span style="animation-delay:0.23s">değiştirmez,</span></span><br><em><span class="w"><span style="animation-delay:0.34s">fotoğrafı</span></span> <span class="w"><span style="animation-delay:0.45s">düzeltir.</span></span></em></h1>
       <p class="sub">Kapalı göz, gergin ifade, karanlık kare. Düzelt, öncesiyle karşılaştır, beğenirsen kaydet.</p>
-      <ul class="chips"><li>Kimlik korunur</li><li>24 saatte silinir</li><li>Filigran yok</li></ul>
-      <p class="soon"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>Yakında App Store’da</span></p>
+      <div class="meta-row">
+        <ul class="chips"><li>Kimlik korunur</li><li>24 saatte silinir</li><li>Filigran yok</li></ul>
+        <p class="soon" style="margin:0"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>Yakında App Store’da</span></p>
+        <!-- Yayında: <a class="soon" href="APP_STORE_LINKI"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store</span></a> -->
+      </div>
     </div>
-    <div class="phone"><img src="assets/app-tr.jpg" alt="Refynora ana ekranı: fotoğraf ızgarası" width="680" height="1477" fetchpriority="high"></div>
+    <div class="scroll-cue" aria-hidden="true"></div>
+  </section>
+
+  <section class="section compare-sec"><div class="wrap">
+    <div class="rv">
+      <span class="sk">ÖNCE / SONRA</span>
+      <h2>Fark, sadece o kare</h2>
+      <p class="lead" style="margin-bottom:0">Aynı fotoğraf; solda çekildiği hâli, sağda düzeltilmiş hâli. Ayracı sürükle.</p>
+      <p class="hint">Ayracı sürükle</p>
+      <p class="cap">Sonuç yine sensin; sadece iyi çıkmış hâlin.</p>
+    </div>
+    <div class="compare rv" role="slider" tabindex="0" aria-label="ÖNCE / SONRA" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <img src="assets/compare.jpg" alt="Aynı portrenin karanlık ve düzeltilmiş hâlleri" width="1100" height="1650" fetchpriority="high">
+      <img src="assets/compare.jpg" alt="" aria-hidden="true" class="before" width="1100" height="1650">
+      <span class="divider" aria-hidden="true"></span>
+      <span class="knob" aria-hidden="true">⇄</span>
+      <span class="tag b">ÖNCE</span>
+      <span class="tag a">SONRA</span>
+    </div>
+  </div></section>
+
+  <section class="section theater"><div class="wrap">
+    <div class="stage rv"><div class="phone"><img src="assets/tr-eyes.jpg" alt="Gözler aracı: önce ve sonra" width="620" height="1347" loading="lazy" data-beat="0" class=on><img src="assets/tr-hair.jpg" alt="Saç aracı: kesim ve renk seçenekleri" width="620" height="1347" loading="lazy" data-beat="1"><img src="assets/tr-onb.jpg" alt="Karşılama ekranı" width="620" height="1347" loading="lazy" data-beat="2"></div></div>
+    <div>
+      <span class="sk rv">NE YAPAR</span>
+      <h2 class="rv">Doğal duran düzeltmeler</h2>
+      <div class="beats"><article class="beat rv" data-beat="0"><span class="no">01</span><h3>Gözler</h3><p>Kapalı gözü açar; yüzün geri kalanına dokunulmaz.</p></article><article class="beat rv" data-beat="1"><span class="no">02</span><h3>Görünüm</h3><p>Saç, sakal, gözlük: yalnızca görsel bir deneme; yüz hatların aynı kalır.</p></article><article class="beat rv" data-beat="2"><span class="no">03</span><h3>Sonuç yine sen</h3><p>Basılı tut, öncesiyle karşılaştır. Sonuç yine sensin; sadece iyi çıkmış hâlin.</p></article></div>
+    </div>
+  </div></section>
+
+  <section class="section tools-sec">
+    <div class="wrap rv">
+      <span class="sk">ARAÇLAR</span>
+      <h2>Gözlerden ışığa, tek tek düzelt</h2>
+      <p class="lead">Uygulamadaki araçların gerçek önizlemeleri. Maliyeti işlemden önce görürsün.</p>
+    </div>
+    <div class="marquee m1" aria-hidden="true"><img src="assets/tools/eyes-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/eyes-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/smile-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/smile-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/expression-lively.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/expression-serious.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-blonde.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-black.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-dark-brown.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-medium-brown.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/beard-full-beard.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/beard-stubble.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/beard-remove.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/brow-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/eyes-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/eyes-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/smile-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/smile-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/expression-lively.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/expression-serious.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-blonde.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-black.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-dark-brown.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/hair-medium-brown.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/beard-full-beard.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/beard-stubble.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/beard-remove.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/brow-before.jpg" alt="" width="118" height="132" loading="lazy"></div>
+    <div class="marquee m2" aria-hidden="true"><img src="assets/tools/brow-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/jaw-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/chin-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/gaze-x.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/wink-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-anime.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-watercolor.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-sketch.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-clay.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-gothic.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/age-younger.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/age-older.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/mouth-aaa.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-pixel-art.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/brow-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/jaw-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/chin-after.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/gaze-x.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/wink-before.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-anime.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-watercolor.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-sketch.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-clay.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-gothic.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/age-younger.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/age-older.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/mouth-aaa.jpg" alt="" width="118" height="132" loading="lazy"><img src="assets/tools/fun-pixel-art.jpg" alt="" width="118" height="132" loading="lazy"></div>
+  </section>
+
+  <section class="section video-sec"><div class="wrap">
+    <div class="vphone rv">
+      <video playsinline preload="none" poster="assets/preview-poster-tr.jpg" width="720" height="1560">
+        <source src="assets/preview-tr.mp4" type="video/mp4">
+      </video>
+      <button class="vplay" type="button" aria-label="Tanıtımı oynat"><span>▶</span></button>
+    </div>
+    <div class="rv">
+      <span class="sk">UYGULAMADA</span>
+      <h2>Bir düzeltmenin tamamı</h2>
+      <p class="lead" style="margin-bottom:0">Gerçek ekran kaydı: sorunu seç, Uygula’ya dokun, öncesiyle karşılaştır, kaydet.</p>
+    </div>
   </div></section>
 
   <section class="section"><div class="wrap">
-    <span class="sk">NE YAPAR</span>
-    <h2>Doğal duran düzeltmeler</h2>
-    <div class="feats"><article class="feat"><div class="shot"><img src="assets/tr-eyes.jpg" alt="Refynora Gözler aracı: kapalı gözlü fotoğraf, önce ve sonra küçük görselleri" width="620" height="1347" loading="lazy"></div><h3>Gözler</h3><p>Kapalı gözü açar; yüzün geri kalanına dokunulmaz.</p></article><article class="feat"><div class="shot"><img src="assets/tr-hair.jpg" alt="Refynora Saç aracı: kesim ve renk seçenekleri" width="620" height="1347" loading="lazy"></div><h3>Görünüm</h3><p>Saç, sakal, gözlük: yalnızca görsel bir deneme; yüz hatların aynı kalır.</p></article><article class="feat"><div class="shot"><img src="assets/tr-onb.jpg" alt="Refynora karşılama ekranı: Kötü çıktıysan, düzeltelim" width="620" height="1347" loading="lazy"></div><h3>Sonuç yine sen</h3><p>Basılı tut, öncesiyle karşılaştır. Sonuç yine sensin; sadece iyi çıkmış hâlin.</p></article></div>
+    <span class="sk rv">NASIL ÇALIŞIR</span>
+    <h2 class="rv">Üç adım yeter</h2>
+    <ol class="steps rv"><li><b>Fotoğrafını seç</b>Galerinden seç ya da o an çek.</li><li><b>Sorunu seç, Uygula’ya dokun</b>Maliyeti işlemden önce görürsün.</li><li><b>Karşılaştır, kaydet</b>Basılı tut, öncesiyle karşılaştır; beğendiysen kaydet.</li></ol>
   </div></section>
 
-  <section class="section"><div class="wrap">
-    <span class="sk">NASIL ÇALIŞIR</span>
-    <h2>Üç adım yeter</h2>
-    <ol class="steps"><li><b>Fotoğrafını seç</b>Galerinden seç ya da o an çek.</li><li><b>Sorunu seç, Uygula’ya dokun</b>Maliyeti işlemden önce görürsün.</li><li><b>Karşılaştır, kaydet</b>Basılı tut, öncesiyle karşılaştır; beğendiysen kaydet.</li></ol>
-  </div></section>
-
-  <section class="strip"><div class="wrap">
+  <section class="strip"><div class="wrap rv">
     <p class="big">Üyelik gerekmez · Fotoğrafların telefonunda kalır</p>
     <p class="sub">Her düzeltme 1–2 kredi. Süresiz, abonelik yok.</p>
   </div></section>
 
-  <section class="section"><div class="wrap">
+  <section class="section"><div class="wrap rv">
     <span class="sk">BELGELER</span>
     <div class="cards"><a class="card" href="gizlilik/"><b>Gizlilik Politikası</b><span>Hangi veriler, ne amaçla, ne kadar süre; KVKK kapsamında.</span><em>Oku →</em></a><a class="card" href="kosullar/"><b>Kullanım Koşulları</b><span>Deneme, krediler, kabul edilebilir kullanım ve sorumluluk.</span><em>Oku →</em></a><a class="card" href="destek/"><b>Destek</b><span>Sık sorulan sorular ve bize ulaşma yolları.</span><em>Oku →</em></a></div>
     <div class="support-card">
@@ -69,5 +118,69 @@
   <span>© 2026 Refynora</span>
   <a href="mailto:cosduhalil@gmail.com">cosduhalil@gmail.com</a>
 </div></footer>
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const rv = [...document.querySelectorAll('.rv')];
+  const shots = [...document.querySelectorAll('.phone img[data-beat]')];
+  const beats = [...document.querySelectorAll('.beat')];
+
+  // Tek kaydırma motoru: açığa çıkma + tiyatro. IntersectionObserver
+  // KULLANILMAZ - bazı tarayıcı/uzantı bileşimlerinde hiç ateşlemediği
+  // ölçüldü; rAF kısıtlı scroll her yerde deterministik.
+  let tick = false;
+  const paint = () => {
+    tick = false;
+    const vh = innerHeight;
+    rv.forEach(el => {
+      if (!el.classList.contains('in') && el.getBoundingClientRect().top < vh * .88) el.classList.add('in');
+    });
+    if (shots.length && beats.length) {
+      let best = null, dist = Infinity;
+      beats.forEach(b => {
+        const r = b.getBoundingClientRect();
+        const d = Math.abs((r.top + r.bottom) / 2 - vh / 2);
+        if (d < dist) { dist = d; best = b.dataset.beat; }
+      });
+      shots.forEach(img => img.classList.toggle('on', img.dataset.beat === best));
+    }
+  };
+  const ask = () => { if (!tick) { tick = true; requestAnimationFrame(paint); } };
+  if (reduce) { rv.forEach(el => el.classList.add('in')); }
+  addEventListener('scroll', ask, {passive: true});
+  addEventListener('resize', ask, {passive: true});
+  paint();
+
+  // Önce/Sonra kaydırıcısı
+  const cmp = document.querySelector('.compare');
+  if (cmp) {
+    const set = (clientX) => {
+      const r = cmp.getBoundingClientRect();
+      const p = Math.min(95, Math.max(5, (clientX - r.left) / r.width * 100));
+      cmp.style.setProperty('--pos', p + '%');
+      cmp.setAttribute('aria-valuenow', Math.round(p));
+    };
+    cmp.addEventListener('pointerdown', e => {
+      try { cmp.setPointerCapture(e.pointerId); } catch (_) {}
+      set(e.clientX);
+    });
+    cmp.addEventListener('pointermove', e => { if (e.pressure > 0 || e.buttons) set(e.clientX); });
+    cmp.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      const cur = parseFloat(cmp.style.getPropertyValue('--pos')) || 50;
+      const r = cmp.getBoundingClientRect();
+      set(r.left + r.width * (cur + (e.key === 'ArrowRight' ? 4 : -4)) / 100);
+    });
+  }
+
+  // Video: dokun-oynat
+  const btn = document.querySelector('.vplay');
+  if (btn) btn.addEventListener('click', () => {
+    const v = btn.parentElement.querySelector('video');
+    btn.remove(); v.controls = true; v.play();
+  });
+})();
+</script>
 </body>
 </html>
